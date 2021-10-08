@@ -1,0 +1,19 @@
+{
+  "front": {
+    "title": "Ivan Brajković",
+    "subtitle": "Senior Javascript in Eng.",
+    "content": "<p> 'The thing about smart people is that thay seem like crazy people to dumb people.' <span> <small>- Stephen Hawknig</small> </span> </p>"
+  },
+  "back": {
+    "header": "",
+    "title": "Ivan Brajković",
+    "subtitle": "Senior Javascript in Eng.",
+    "content": "",
+    "socialLinks": {
+      "github": "https://github.com/ivbrajkovic?tab=repositories",
+      "facebook": "https://github.com/ivbrajkovic?tab=repositories",
+      "linkedin": "https://github.com/ivbrajkovic?tab=repositories",
+      "twitter": "https://github.com/ivbrajkovic?tab=repositories"
+    }
+  }
+}

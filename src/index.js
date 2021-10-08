@@ -1,13 +1,26 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import CssBaseline from '@mui/material/CssBaseline';
+
+import { SnackbarProvider } from 'components/Snackbar/useSnackbar';
+import { Snackbar } from 'components';
+import { ThemeProvider } from 'theme';
+
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <ThemeProvider>
+      <SnackbarProvider>
+        <CssBaseline />
+        <App />
+        <Snackbar />
+      </SnackbarProvider>
+    </ThemeProvider>
   </React.StrictMode>,
+  // eslint-disable-next-line no-undef
   document.getElementById('root')
 );
 

@@ -1,25 +1,44 @@
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter as Router, Switch } from 'react-router-dom';
+import { Toolbar } from '@mui/material';
+import { styled } from '@mui/material/styles';
+import { Navigation } from 'layout';
+import Routes from './Routes';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+const RootContainer = styled('div')`
+  display: flex;
+  height: 100vh;
+  overflow: hidden;
+`;
+
+const PageContainer = styled('main')(({ theme }) => ({
+  flexGrow: 1,
+  height: '100%',
+  marginLeft: `calc(${theme.spacing(7)} + 1px)`,
+  [theme.breakpoints.up('sm')]: {
+    marginLeft: `auto`,
+  },
+  display: 'grid',
+  gridTemplateRows: 'auto 1fr',
+}));
+
+const ViewContainer = styled('div')`
+  position: relative;
+`;
+
+const App = () => (
+  <RootContainer>
+    <Router>
+      <Navigation />
+      <PageContainer>
+        <Toolbar />
+        <ViewContainer>
+          <Switch>
+            <Routes />
+          </Switch>
+        </ViewContainer>
+      </PageContainer>
+    </Router>
+  </RootContainer>
+);
 
 export default App;

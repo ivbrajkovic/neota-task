@@ -1,0 +1,15 @@
+{
+  "extends": ["airbnb", "prettier"],
+  "parserOptions": { "ecmaVersion": 2020 },
+  "rules": {
+    "react/jsx-uses-react": "off",
+    "react/react-in-jsx-scope": "off",
+    "react/no-unescaped-entities": "off",
+    "react/jsx-filename-extension": "off",
+    "linebreak-style": "off",
+    "react/prop-types": "off",
+    "react/jsx-props-no-spreading": "off",
+    "import/no-unresolved": "off",
+    "react/destructuring-assignment": "off"
+  }
+}
